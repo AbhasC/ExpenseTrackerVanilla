@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <script src="./script.js"></script>
+    <title>Exp tracker</title>
+</head>
+<body>
+    <div class="display">
+        <h1>Expense Tracker</h1>
+        <div class="bal-amt">
+            <span>Balance amount</span>
+            <span id="balamt">₹0.00</span>
+        </div>
+        <div class="income-expense">
+            <div class="income">
+                <span>Income</span>
+                <span id="inc-amt">₹0.00</span>
+            </div>
+            <div class="expense">
+                <span>Expense</span>
+                <span id="exp-amt">₹0.00</span>
+            </div>   
+        </div> 
+        <div class="history">
+            <h3>History</h3>
+            <ul></ul>
+        </div> 
+        <div class="transaction">
+            <h3>Add New Transaction</h3>
+            <form onsubmit="onSubmit(event)">
+                <label id="l1">Description</label>
+                <input id="i1" type="text" placeholder="What is the amount"/>
+                <label id="l2">Amount</label>
+                <input id="i2" type="number" placeholder="Enter amount"/>
+                <div class="inc-exp">
+                    <input type="radio" value="income" id="rad-inc" name="radiob" class="radiobt" checked/>
+                    <label for="rad-inc">Income</label>
+                    <div class="bor"></div>
+                    <input type="radio" value="expense" id="rad-exp" name="radiob" class="radiobt"/>
+                    <label for="rad-exp">Expense</label>
+                </div>
+                <button class="sub-but" type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
